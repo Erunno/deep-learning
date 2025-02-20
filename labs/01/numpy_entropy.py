@@ -68,7 +68,7 @@ def main(args: argparse.Namespace) -> tuple[float, float, float]:
     kl_divergence = np.sum(data_distribution * np.log(data_distribution / model_distribution))
 
     # Return the computed values for ReCodEx to validate.
-    return entropy, crossentropy, kl_divergence
+    return float(entropy), float(crossentropy), float(kl_divergence)
 
 
 if __name__ == "__main__":
